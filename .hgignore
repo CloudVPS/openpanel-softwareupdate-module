@@ -1,0 +1,8 @@
+syntax: glob
+softwareupdatemodule.app
+*.o
+makeinclude
+platform.h
+ktrace.out
+module.xml
+configure.paths

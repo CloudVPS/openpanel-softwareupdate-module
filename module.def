@@ -1,0 +1,80 @@
+# ============================================================================
+# OpenPanel SoftwareUpdate.module for managing apt/yum updates.
+# Copyright (C) 2008 PanelSix V.O.F.
+# ============================================================================
+module SoftwareUpdate				< uuid f4dacd95-1f74-4925-a3e4-9f27f2ad96ce
+									< version 1.0
+									< languages en_EN
+									< apitype xml
+									< getconfig true
+								
+								
+# ============================================================================
+# CLASSES
+# ============================================================================
+class SoftwareUpdate				< uuid a1e930c2-b60f-46bf-a1c9-e67bbb807530
+									< version 1
+									< indexing manual
+									< singleton updates
+									< shortname system-update
+									< title Software Updates
+									< description System software updates
+									< sortindex 90
+									< icon swupd.png
+								
+									< capabilities update admin
+								
+	bool defaultaction				: Default all packages to 'update'
+	method installupdates			: Install selected updates < args static
+
+# ----------------------------------------------------------------------------
+class SoftwareUpdate:UpdatePackage	< uuid c299f0c3-d5f2-490f-9d1c-614f76694bb2
+									< version 1
+									< requires SoftwareUpdate
+									< indexing manual
+									< uniquein parent
+									< dynamic true
+									< shortname package
+									< title Package
+									< description Update package
+									< sortindex 100
+									
+									< capabilities update admin
+									
+	string id						: Package
+									< cliwidth 10
+									< flags visible
+									< gridwidth 18
+									
+	string description				: Description
+									< flags visible
+									< gridwidth 50
+									
+	string newversion				: Version < cliwidth 10
+									< flags visible
+									< gridwidth 20
+									
+	string source					: Repository
+									< clihide true
+									< flags visible
+									< gridhide true
+									
+	string deps						: Also installs
+									< clihide true
+									< gridhide true
+									< flags visible
+									
+	bool enabled					: Install < gridwidth 10
+
+
+# ============================================================================
+# AUTHD
+# ============================================================================
+authd fileops
+	match updatelist.db				: /var/opencore/db
+									< user root
+									< group opencore
+									< perms 0640
+
+authd commands
+	command osupdate
