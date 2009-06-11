@@ -49,6 +49,7 @@ class SoftwareUpdate:UpdatePackage	< uuid c299f0c3-d5f2-490f-9d1c-614f76694bb2
 	textarea description			: Description
 									< flags visible
 									< gridwidth 50
+									< textwidth 40
 									
 	string newversion				: Version < cliwidth 10
 									< flags visible
@@ -63,6 +64,8 @@ class SoftwareUpdate:UpdatePackage	< uuid c299f0c3-d5f2-490f-9d1c-614f76694bb2
 									< clihide true
 									< gridhide true
 									< flags visible
+									< textwidth 40
+									< rows 2
 									
 	bool enabled					: Install < gridwidth 10
 
