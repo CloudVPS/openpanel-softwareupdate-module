@@ -46,7 +46,7 @@ class SoftwareUpdate:UpdatePackage	< uuid c299f0c3-d5f2-490f-9d1c-614f76694bb2
 									< flags visible
 									< gridwidth 18
 									
-	string description				: Description
+	textarea description			: Description
 									< flags visible
 									< gridwidth 50
 									
@@ -59,7 +59,7 @@ class SoftwareUpdate:UpdatePackage	< uuid c299f0c3-d5f2-490f-9d1c-614f76694bb2
 									< flags visible
 									< gridhide true
 									
-	string deps						: Also installs
+	textarea deps					: Also installs
 									< clihide true
 									< gridhide true
 									< flags visible
