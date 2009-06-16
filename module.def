@@ -42,6 +42,7 @@ class SoftwareUpdate:UpdatePackage	< uuid c299f0c3-d5f2-490f-9d1c-614f76694bb2
 									< description Update package
 									< sortindex 100
 									< gridheight 250
+									< emptytext No updates available.
 									
 									< capabilities update admin
 									
