@@ -2,8 +2,11 @@ include makeinclude
 
 OBJ	= main.o version.o
 
-all: module.xml softwareupdatemodule.exe
+all: module.xml softwareupdatemodule.exe down_swupd.png
 	mkapp softwareupdatemodule
+
+down_swupd.png: swupd.png
+	convert -modulate 50,100,100 swupd.png down_swupd.png
 
 module.xml: module.def
 	mkmodulexml < module.def > module.xml
