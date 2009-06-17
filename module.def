@@ -20,7 +20,7 @@ class SoftwareUpdate				< uuid a1e930c2-b60f-46bf-a1c9-e67bbb807530
 									< indexing manual
 									< singleton updates
 									< shortname system-update
-									< title Software Updates
+									< title Software
 									< description System software updates
 									< sortindex 90
 									< icon swupd.png
