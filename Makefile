@@ -16,7 +16,7 @@ version.cpp:
 
 softwareupdatemodule.exe: $(OBJ)
 	$(LD) $(LDFLAGS) -o softwareupdatemodule.exe $(OBJ) $(LIBS) \
-	../opencore/api/c++/lib/libcoremodule.a
+	/usr/lib/opencore/libcoremodule.a
 
 clean:
 	rm -f *.o *.exe

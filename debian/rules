@@ -3,17 +3,17 @@
 
 BUILD_ROOT=$(CURDIR)/debian/tmp
 install:
-trm -rf ${BUILD_ROOT}
-tmkdir -p ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module
-tcp -rf ./softwareupdatemodule.app ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/
-tln -sf ./softwareupdatemodule.app/exec ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/action
-tcp module.xml ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/module.xml
-tcp *.png ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/
-tinstall -m 755 verify ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/verify
+	rm -rf ${BUILD_ROOT}
+	mkdir -p ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module
+	cp -rf ./softwareupdatemodule.app ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/
+	ln -sf ./softwareupdatemodule.app/exec ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/action
+	cp module.xml ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/module.xml
+	cp *.png ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/
+	install -m 755 verify ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/verify
 
 build:
-t./configure
-tmake
+	./configure
+	make
 binary-indep:
 
 binary-arch binary: build install

@@ -14,7 +14,7 @@
 #ifndef _softwareupdatemodule_H
 #define _softwareupdatemodule_H 1
 
-#include <moduleapp.h>
+#include <opencore/moduleapp.h>
 #include <grace/application.h>
 
 //  -------------------------------------------------------------------------
