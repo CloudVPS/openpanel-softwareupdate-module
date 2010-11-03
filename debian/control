@@ -8,5 +8,5 @@ Standards-Version: 3.7.2
 Package: openpanel-mod-softwareupdate
 Architecture: any
 Depends: openpanel-core (>= 0.8.3), openpanel-swupd
-Description: Software update module
+Description: OpenPanel module to manage software updates
  Controls software updates through OpenPanel
