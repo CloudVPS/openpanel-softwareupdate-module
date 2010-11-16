@@ -1,8 +1,8 @@
 Source: openpanel-mod-softwareupdate
 Section: misc
 Priority: optional
-Maintainer: OpenPanel packager <packages@openpanel.com
-Build-Depends: debhelper (>= 5), libgrace-dev, openpanel-mkmodulexml, openpanel-dev, imagemagick
+Maintainer: OpenPanel packager <packages@openpanel.com>
+Build-Depends: debhelper (>= 5), libgrace-dev, openpanel-dev, imagemagick
 Standards-Version: 3.7.2
 
 Package: openpanel-mod-softwareupdate
