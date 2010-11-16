@@ -28,8 +28,9 @@ set -e
 
 case "$1" in
     configure)
-mkdir -p /var/opencore/conf/staging/SoftwareUpdate
-chown opencore:authd /var/opencore/conf/staging/SoftwareUpdate
+        mkdir -p /var/opencore/conf/staging/SoftwareUpdate
+        chown opencore:authd /var/opencore/conf/staging/SoftwareUpdate
+        invoke-rc.d openpanel-core reload
 
     ;;
 
