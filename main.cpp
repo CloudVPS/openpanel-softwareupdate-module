@@ -11,10 +11,10 @@
 #include "softwareupdateModule.h"
 #include <grace/filesystem.h>
 
-#define PATH_DB "/var/opencore/db"
+#define PATH_DB "/var/openpanel/db"
 #define PATH_CACHEFILE PATH_DB "/softwareupdate.db"
 #define PATH_LISTFILE PATH_DB "/updatelist.db"
-#define PATH_STAGING "/var/opencore/conf/staging/SoftwareUpdate"
+#define PATH_STAGING "/var/openpanel/conf/staging/SoftwareUpdate"
 
 APPOBJECT(softwareupdateModuleApp);
 
@@ -67,7 +67,7 @@ void softwareupdateModuleApp::sendRootObject (void)
 
 void softwareupdateModuleApp::listobjects (void)
 {
-	if (! fs.exists ("/var/opencore/db/softwareupdate.db"))
+	if (! fs.exists ("/var/openpanel/db/softwareupdate.db"))
 	{
 		sendresult (moderr::ok, "OK");
 		return;

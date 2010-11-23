@@ -87,7 +87,7 @@ class SoftwareUpdate:UpdatePackage	< uuid c299f0c3-d5f2-490f-9d1c-614f76694bb2
 # AUTHD
 # ============================================================================
 authd fileops
-	match updatelist.db				: /var/opencore/db
+	match updatelist.db				: /var/openpanel/db
 									< user root
 									< group opencore
 									< perms 0640

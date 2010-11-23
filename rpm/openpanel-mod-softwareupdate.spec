@@ -42,16 +42,16 @@ make
 %install
 BUILD_ROOT=$RPM_BUILD_ROOT
 rm -rf ${BUILD_ROOT}
-mkdir -p ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module
-cp -rf ./softwareupdatemodule.app ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/
-ln -sf ./softwareupdatemodule.app/exec ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/action
-cp module.xml ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/module.xml
-cp *.png ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/
-install -m 755 verify ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/verify
+mkdir -p ${BUILD_ROOT}/var/openpanel/modules/SoftwareUpdate.module
+cp -rf ./softwareupdatemodule.app ${BUILD_ROOT}/var/openpanel/modules/SoftwareUpdate.module/
+ln -sf ./softwareupdatemodule.app/exec ${BUILD_ROOT}/var/openpanel/modules/SoftwareUpdate.module/action
+cp module.xml ${BUILD_ROOT}/var/openpanel/modules/SoftwareUpdate.module/module.xml
+cp *.png ${BUILD_ROOT}/var/openpanel/modules/SoftwareUpdate.module/
+install -m 755 verify ${BUILD_ROOT}/var/openpanel/modules/SoftwareUpdate.module/verify
 
 %post
-mkdir -p /var/opencore/conf/staging/SoftwareUpdate
-chown opencore:authd /var/opencore/conf/staging/SoftwareUpdate
+mkdir -p /var/openpanel/conf/staging/SoftwareUpdate
+chown openpanel-core:openpanel-authd /var/openpanel/conf/staging/SoftwareUpdate
 
 %files
 %defattr(-,root,root)
