@@ -112,6 +112,7 @@ void softwareupdateModuleApp::listobjects (void)
 		out["uuid"] = "5973053a-2cd1-41a9-8ff8-00000000%04x" %format (count);
 		out["metaid"] = update.id();
 		out["id"] = update.id();
+		out["class"] = "SoftwareUpdate:UpdatePackage";
 		
 		res["objects"]["SoftwareUpdate:UpdatePackage"]("type") = "class";
 		res["objects"]["SoftwareUpdate:UpdatePackage"][update.id()] = out;
