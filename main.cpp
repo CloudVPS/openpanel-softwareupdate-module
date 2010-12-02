@@ -82,9 +82,11 @@ void softwareupdateModuleApp::listobjects (void)
 	if (! selection.exists ("default")) selection["default"] = true;
 	
 	value res;
+	int count = 0;
 	
 	foreach (update, v)
 	{
+		count++;
 		value out = update;
 		string deplist;
 		out.rmval ("deps");
@@ -106,6 +108,9 @@ void softwareupdateModuleApp::listobjects (void)
 		{
 			out["enabled"] = selection["default"].bval();
 		}
+		
+		out["uuid"] = "5973053a-2cd1-41a9-8ff8-00000000%04x" %format (count);
+		out["metaid"] = update.id();
 		
 		res["objects"]["SoftwareUpdate:UpdatePackage"]("type") = "class";
 		res["objects"]["SoftwareUpdate:UpdatePackage"][update.id()] = out;
