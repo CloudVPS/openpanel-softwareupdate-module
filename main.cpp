@@ -160,7 +160,17 @@ void softwareupdateModuleApp::updateObject (const value &args)
 	}
 	
 	const value &obj = args["SoftwareUpdate:UpdatePackage"];
-	statstring objid = obj["id"];
+	string oid = obj["id"];
+	
+	if (oid.strcmp ("5973053a", 8) == 0)
+	{
+		oid.cropafterlast ("-");
+		int pos = oid.toint (16);
+		oid = v[pos].id();
+	}
+	
+	statstring objid = oid;
+	
 	
 	if (! selection.exists ("default")) selection["default"] = true;
 	
