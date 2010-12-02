@@ -162,7 +162,7 @@ void softwareupdateModuleApp::updateObject (const value &args)
 	const value &obj = args["SoftwareUpdate:UpdatePackage"];
 	string oid = obj["id"];
 	
-	if (oid.strcmp ("5973053a", 8) == 0)
+	if (oid.strncmp ("5973053a", 8) == 0)
 	{
 		oid.cropafterlast ("-");
 		int pos = oid.toint (16);
