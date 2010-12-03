@@ -10,7 +10,7 @@
 #ifndef _softwareupdatemodule_H
 #define _softwareupdatemodule_H 1
 
-#include <opencore/moduleapp.h>
+#include <openpanel-core/moduleapp.h>
 #include <grace/application.h>
 
 //  -------------------------------------------------------------------------

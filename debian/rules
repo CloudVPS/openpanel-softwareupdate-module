@@ -13,12 +13,12 @@
 BUILD_ROOT=$(CURDIR)/debian/tmp
 install:
 	rm -rf ${BUILD_ROOT}
-	mkdir -p ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module
-	cp -rf ./softwareupdatemodule.app ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/
-	ln -sf ./softwareupdatemodule.app/exec ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/action
-	cp module.xml ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/module.xml
-	cp *.png ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/
-	install -m 755 verify ${BUILD_ROOT}/var/opencore/modules/SoftwareUpdate.module/verify
+	mkdir -p ${BUILD_ROOT}/var/openpanel/modules/SoftwareUpdate.module
+	cp -rf ./softwareupdatemodule.app ${BUILD_ROOT}/var/openpanel/modules/SoftwareUpdate.module/
+	ln -sf ./softwareupdatemodule.app/exec ${BUILD_ROOT}/var/openpanel/modules/SoftwareUpdate.module/action
+	cp module.xml ${BUILD_ROOT}/var/openpanel/modules/SoftwareUpdate.module/module.xml
+	cp *.png ${BUILD_ROOT}/var/openpanel/modules/SoftwareUpdate.module/
+	install -m 755 verify ${BUILD_ROOT}/var/openpanel/modules/SoftwareUpdate.module/verify
 
 build:
 	./configure
