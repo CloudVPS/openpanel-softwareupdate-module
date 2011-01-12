@@ -13,7 +13,7 @@
 module SoftwareUpdate				< uuid f4dacd95-1f74-4925-a3e4-9f27f2ad96ce
 									< version 1.0
 									< languages en_EN
-									< apitype xml
+									< apitype grace
 									< getconfig true
 								    < license GPLv3
 								    < author OpenPanel
