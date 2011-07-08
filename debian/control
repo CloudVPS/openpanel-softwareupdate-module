@@ -2,12 +2,12 @@ Source: openpanel-mod-softwareupdate
 Section: misc
 Priority: optional
 Maintainer: OpenPanel packager <packages@openpanel.com>
-Build-Depends: debhelper (>= 5), libgrace-dev, openpanel-dev, imagemagick
+Build-Depends: debhelper (>= 5), libgrace-dev (>= 1.0), openpanel-dev (>= 1.1), imagemagick
 Standards-Version: 3.7.2
 
 Package: openpanel-mod-softwareupdate
 Architecture: any
-Pre-Depends: openpanel-core, openpanel-authd
-Depends: openpanel-core (>= 0.8.3), openpanel-swupd, ${shlibs:Depends}, ${misc:Depends}
+Pre-Depends: openpanel-core (>= 1.1), openpanel-authd (>= 1.1)
+Depends: openpanel-core (>= 1.1), openpanel-swupd (>= 1.1), ${shlibs:Depends}, ${misc:Depends}
 Description: OpenPanel module to manage software updates
  Controls software updates through OpenPanel
